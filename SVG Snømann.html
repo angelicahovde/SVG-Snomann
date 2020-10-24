@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>SVG Snømann</title>
+</head>
+<body>
+    <svg height="1000" width="1000">
+        <defs>
+            <filter id="f1" x="0" y="0" width="200%" height="500%">
+                <feOffset result="offOut" in="SourceGraphic" dx="10" dy="5"/>
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+      values="0.3 0 0 0 0 0 0.3 0 0 0 0 0 0.3 0 0 0 0 0 1 0" />
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />  
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+            </filter>
+        </defs>
+        <rect x="470" y="30" rx="20" ry="20" width="60" height="80" style="fill:#000000;" filter="url(#f1)" />
+        <circle cx="500" cy="160" r="50" fill="#eddbc5da" filter="url(#f1)"/> 
+        <rect x="435" y="100" rx="50" ry="20" width="130" height="15" style="fill:#000000;" filter="url(#f1)"/>
+        <rect x="470" y="90" rx="20" ry="20" width="60" height="10" style="fill:#ff0000;stroke-width:3;stroke:#0d6302;opacity:0.6"/>
+        <circle cx="480" cy="150" r="5" fill="#000000"/> 
+        <circle cx="520" cy="150" r="5" fill="#000000"/> 
+        <circle cx="480" cy="180" r="4" fill="#000000"/>
+        <circle cx="490" cy="185" r="4" fill="#000000"/>
+        <circle cx="500" cy="190" r="4" fill="#000000"/>
+        <circle cx="510" cy="185" r="4" fill="#000000"/>
+        <circle cx="520" cy="180" r="4" fill="#000000"/> 
+        <circle cx="500" cy="430" r="120" fill="#eddbc5da" filter="url(#f1)"/>
+        <circle cx="500" cy="280" r="80" fill="#eddbc5da" filter="url(#f1)"/> 
+        <rect x="450" y="200" rx="20" ry="30" width="20" height="120" style="fill:#0d6302;" />
+        <rect x="450" y="200" width="100" height="15" style="fill:#ff0000"/>
+        <rect x="460" y="200" rx="20" ry="30" width="20" height="100" style="fill:#ff0000;" />
+        <circle cx="500" cy="260" r="10" fill="#1d1c1c"/>
+        <circle cx="500" cy="300" r="10" fill="#1d1c1c"/>
+        <circle cx="500" cy="340" r="10" fill="#1d1c1c"/>
+        <circle cx="500" cy="380" r="10" fill="#1d1c1c"/>
+        <circle cx="500" cy="420" r="10" fill="#1d1c1c"/>
+        <polygon points="500,160 500,175 550,180" style="fill:#d48e0b;" /> 
+    </svg>
+</body>
+</html>
